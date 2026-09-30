@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiayi (Olivia) Wang</title>
+<meta name="description" content="Jiayi (Olivia) Wang — Ph.D. student at the University of South Florida working on multimodal affective computing, LLM-based behavior understanding, and AI for healthcare and aging. Seeking Summer 2027 research internships.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbf9; --surface:#ffffff; --surface-2:#f3f5f2;
+  --text:#1c2321; --muted:#5b6662; --faint:#8a948f;
+  --border:#e3e7e3; --accent:#0f6b50; --accent-soft:#e4f2ec; --accent-text:#0b5a43;
+  --warn-soft:#fff5dc; --warn-text:#7a5500;
+  --shadow:0 1px 2px rgba(20,30,25,.04),0 4px 16px rgba(20,30,25,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111513; --surface:#171c1a; --surface-2:#1d2421;
+    --text:#e6ebe8; --muted:#a3aeaa; --faint:#7b8682;
+    --border:#2a322f; --accent:#4cc39a; --accent-soft:#18322a; --accent-text:#7fdcb9;
+    --warn-soft:#332b14; --warn-text:#f0cf7a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111513; --surface:#171c1a; --surface-2:#1d2421;
+  --text:#e6ebe8; --muted:#a3aeaa; --faint:#7b8682;
+  --border:#2a322f; --accent:#4cc39a; --accent-soft:#18322a; --accent-text:#7fdcb9;
+  --warn-soft:#332b14; --warn-text:#f0cf7a;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-text);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+nav .brand{font-weight:700;color:var(--text);white-space:nowrap}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav ul a{color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap}
+nav ul a:hover{color:var(--text);text-decoration:none}
+
+/* hero */
+.hero{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:48px 0 32px;align-items:start}
+.hero .photo{width:220px;height:246px;object-fit:cover;border-radius:14px;box-shadow:var(--shadow)}
+.monogram{display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,var(--accent-soft),var(--surface-2));border:1px solid var(--border);font-family:"Source Serif 4",Georgia,serif;font-size:64px;font-weight:700;color:var(--accent-text);letter-spacing:.02em}
+.hero h1{font-family:"Source Serif 4",Georgia,serif;font-size:40px;line-height:1.15;margin:0 0 6px}
+.hero .role{font-size:17px;color:var(--text);margin:0}
+.hero .aff{color:var(--muted);margin:2px 0 14px;font-size:15px}
+.seeking{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);color:var(--accent-text);border-radius:10px;padding:12px 14px;margin:14px 0 16px;font-size:15px}
+.seeking .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);padding:7px 13px;border-radius:8px;font-size:14px;font-weight:500}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#06140f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#06140f}}
+
+/* sections */
+section{padding:36px 0;border-top:1px solid var(--border)}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:26px;margin:0 0 18px}
+h3{font-size:18px;margin:0 0 6px;line-height:1.35}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);color:var(--muted)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 6px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+.stat b{display:block;font-size:24px;font-weight:700;color:var(--accent-text);line-height:1.2}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* featured */
+.feature{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:22px}
+.feature .fig{background:#fff;border-bottom:1px solid var(--border);padding:16px}
+.feature .fig img{margin:0 auto;max-height:340px;object-fit:contain}
+.feature .body{padding:20px 22px 22px}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text);margin-bottom:6px}
+.feature ul{margin:8px 0 12px;padding-left:20px}
+.feature li{margin-bottom:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
+.card ul{margin:8px 0 0;padding-left:20px}
+.card li{margin-bottom:3px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border);margin-right:6px}
+.pill.ongoing{background:var(--warn-soft);color:var(--warn-text);border-color:transparent}
+.pill.award{background:var(--accent-soft);color:var(--accent-text);border-color:transparent}
+
+/* pubs */
+.pub{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:14px 0;border-bottom:1px dashed var(--border)}
+.pub:last-child{border-bottom:none}
+.venue{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--accent-text);background:var(--accent-soft);border-radius:6px;padding:4px 6px;text-align:center;height:fit-content}
+.pub .title{font-weight:600}
+.pub .authors{font-size:14px;color:var(--muted)}
+.pub .authors b{color:var(--text)}
+.pub .where{font-size:14px;font-style:italic;color:var(--muted)}
+.pub .acts{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+.pub .acts a,.pub .acts span{font-size:13px;border:1px solid var(--border);border-radius:6px;padding:2px 8px}
+.pub .acts span{color:var(--faint)}
+
+/* timeline */
+.news{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:9px 0;border-bottom:1px solid var(--border)}
+.news li:last-child{border-bottom:none}
+.news time{font-size:14px;font-weight:600;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--border)}
+.list li:last-child{border-bottom:none}
+.list .when{color:var(--muted);font-size:14px;white-space:nowrap}
+
+footer{padding:32px 0 48px;color:var(--faint);font-size:14px;border-top:1px solid var(--border)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:20px;padding-top:28px}
+  .hero .photo{width:150px;height:168px}
+  .monogram{font-size:40px}
+  .hero h1{font-size:32px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .two{grid-template-columns:1fr}
+  .pub{grid-template-columns:1fr;gap:6px}
+  .venue{width:fit-content}
+  .news li{grid-template-columns:1fr;gap:0}
+  .list li{flex-direction:column;gap:0}
+  nav .brand{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Jiayi (Olivia) Wang</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Posters &amp; Talks</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- HERO -->
+<header class="hero" id="about">
+  <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Jiayi Wang">
+  <div>
+    <h1>Jiayi (Olivia) Wang</h1>
+    <p class="role">Ph.D. Student in Computer Science &amp; Engineering</p>
+    <p class="aff">University of South Florida · <a href="https://rpal.cse.usf.edu" target="_blank" rel="noopener">Robot Perception and Action Lab (RPAL)</a> · <a href="https://www.usf.edu/ai-cybersecurity-computing/centers/cita/" target="_blank" rel="noopener">Center for Innovation, Technology &amp; Aging (CITA)</a></p>
+
+    <div class="seeking"><span class="dot"></span><div><b>Seeking Summer 2027 research internships</b> in multimodal AI, affective computing, human behavior understanding, and AI for healthcare.</div></div>
+
+    <p>I build AI that reads <b>subtle, real-world human behavior</b>: facial action units, gaze, head and body movement, and the emotional signals behind them. I focus on populations that current models underserve, especially older adults. I am advised by <b>Prof. Yu Sun</b>.</p>
+    <p>My work covers the full research pipeline. I design IRB-approved human-subject studies, collect multimodal data with clinical partners (a board-certified music therapist and gerontology researchers), turn expert observations into computable labels, and build <b>LLM-based multimodal reasoning</b> methods on top of that data. Before my Ph.D., I spent 1.5 years in industry as a software engineer and QA engineer.</p>
+
+    <div class="links">
+      <a class="btn primary" href="mailto:jiayi.oliviawang@gmail.com">✉ Email</a>
+      <a class="btn" href="assets/pdf/JiayiWang_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/jiayi-wang-22b848156/" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- TODO: add GitHub and Google Scholar once URLs are ready
+      <a class="btn" href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=ID" target="_blank" rel="noopener">Scholar</a>
+      -->
+    </div>
+
+    <div class="tags">
+      <span class="tag">Multimodal Affective Computing</span>
+      <span class="tag">LLM Multimodal Reasoning</span>
+      <span class="tag">Human Behavior Understanding</span>
+      <span class="tag">AI for Healthcare &amp; Aging</span>
+      <span class="tag">Personalization</span>
+      <span class="tag">Human-Subject Data Collection</span>
+    </div>
+  </div>
+</header>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Featured Research</h2>
+
+  <article class="feature">
+    <div class="fig"><img src="assets/img/AnnotationPipeline.png" alt="Annotation pipeline: 30-second clips are reviewed by a music therapist, converted into structured labels with an LLM, then manually validated into final timestamped annotations."></div>
+    <div class="body">
+      <div class="kicker">First-author · IEEE Transactions on Affective Computing (accepted, 2026)</div>
+      <h3>A Multimodal Dataset for Music-Induced Emotion and Micro-Behavior Analysis in Older Adults</h3>
+      <p class="muted">Most emotion datasets feature young adults or actors. Older adults express emotion more subtly, and models trained on young faces often miss those signals. I led the construction of a therapist-annotated, de-identified multimodal dataset to fill this gap.</p>
+      <div class="stats">
+        <div class="stat"><b>17</b><span>older adults (60+)</span></div>
+        <div class="stat"><b>200</b><span>clips · ≈183K frames</span></div>
+        <div class="stat"><b>1,326</b><span>labeled micro-behaviors</span></div>
+        <div class="stat"><b>4</b><span>modalities: face · gaze · head · body</span></div>
+      </div>
+      <ul>
+        <li>Designed an <b>IRB-approved protocol</b>: 12 music stimuli, self-reports of valence, arousal, liking and familiarity, with participants recruited from the community.</li>
+        <li>Built a 3-stage <b>expert-to-label pipeline</b>. A music therapist writes free-text observations, an LLM extracts structured timestamps, and a human validation pass turns them into a 12-class micro-behavior taxonomy.</li>
+        <li>Extracted de-identified features with <b>OpenFace and OpenPose</b> (action units, gaze, head pose, upper-body keypoints). Only derived features are shared, which protects participant privacy.</li>
+        <li>Funded by the USF CREATE Award and the Florida High-Tech Corridor Early-Stage Innovation Fund.</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="mailto:jiayi.oliviawang@gmail.com?subject=Dataset%20access%20request">Dataset: available on request</a>
+        <a class="btn" href="assets/pdf/poster_CITA_2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature">
+    <div class="fig"><img src="assets/img/MicroBehaviorFlowChart.png" alt="Chain-of-Modality prompting: gaze, facial action units, upper-body keypoints and head rotation are fed to the LLM one modality at a time, each answer building on the previous one." style="max-height:420px"></div>
+    <div class="body">
+      <div class="kicker">LLM × multimodal time series</div>
+      <h3>Chain-of-Modality (CoM) Prompting for Micro-Behavior Detection</h3>
+      <p class="muted">Can an LLM read raw behavioral signals (gaze vectors, action-unit intensities, skeleton keypoints) and describe what a person is doing second by second, without task-specific training?</p>
+      <ul>
+        <li>Proposed <b>Chain-of-Modality prompting</b> with GPT-4o. Modalities are reasoned about one at a time (gaze → face → body → head), and each step builds on the previous answer.</li>
+        <li>Zero-shot temporal localization of therapist-annotated behaviors reached <b>R@1@0.3 = 70.0%</b> and <b>mIoU = 0.524</b>.</li>
+        <li>Downstream mood-change prediction reached <b>0.88 accuracy</b> from therapist-annotated behavior sequences.</li>
+        <li>Analyzed failure cases second by second, tracing error propagation from over-segmentation and mistimed cues. The analysis shows where LLM temporal reasoning breaks down.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="two">
+    <div class="card">
+      <span class="pill ongoing">Ongoing</span>
+      <h3 style="margin-top:8px">Cold-Start Personalization with Adaptive Modality Selection</h3>
+      <p class="muted" style="margin:0">People express emotion through different channels. Some show it on the face, others through gaze or posture. I am studying how to choose the right modalities for a <i>new</i> person with little or no labeled data.</p>
+      <ul>
+        <li>A zero-shot KNN warm-up for personalized modality selection reaches <b>0.770 balanced accuracy</b> and closes <b>51%</b> of the baseline–oracle gap.</li>
+        <li>Evaluating wearables (Fitbit Charge 6, Empatica EmbracePlus, Polar H10) for low-burden HRV and EDA sensing with older adults.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="pill">IEEE CBMS 2025</span>
+      <h3 style="margin-top:8px">Multimodal Neonatal Pain Assessment in the NICU</h3>
+      <p class="muted" style="margin:0">Newborns cannot report pain. As a member of the engineering team on RPAL’s <a href="https://rpal.cse.usf.edu/project_neonatal_pain/" target="_blank" rel="noopener">Neonatal Pain Assessment project</a>, I work with USF Health clinicians on using facial expression, body movement and vital signs to detect and predict post-operative pain.</p>
+      <ul>
+        <li>Processed multimodal NICU data (face, body movement, HR, respiration rate, SpO<sub>2</sub>).</li>
+        <li>LSTM pain classifier: <b>74% AUC</b>, <b>67.59% mAP</b> (5-fold CV). Benchmarked CNN+LSTM, ViViT and Transformer models for video-based detection.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="pill award">Award</span>
+      <h3 style="margin-top:8px">Voice AI for Stridor Detection (Bridge2AI-Voice)</h3>
+      <p class="muted" style="margin:0"><a href="https://www.b2aivoicescholars.org/our-scholars#!biz/id/66ce20bb5325c8d871041ce2" target="_blank" rel="noopener">Bridge2AI-Voice Scholar</a> (NIH Common Fund program). Machine learning modeling and technical support for my team at the Bridge2AI-Voice Hackathon: 9 teams from USF, Weill Cornell, OHSU and WashU.</p>
+      <ul>
+        <li>End-to-end audio ML pipeline: 130 engineered acoustic features, PCA and feature selection, Random Forest and XGBoost. Up to <b>93.2% accuracy</b>.</li>
+        <li><b>Honorable Mention</b> at the hackathon (Aug 2024).</li>
+        <li>The team continued the work into the manuscript <i>“Advancing Stridor Detection with Artificial Intelligence and Bridge2AI Voice Data,”</i> which won the <b>2nd Place Steven Dean Gray Award</b> from the American Broncho-Esophagological Association (ABEA) at COSM 2025.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="pill">Systems</span>
+      <h3 style="margin-top:8px">GPU-Accelerated Index Search for Databases</h3>
+      <p class="muted" style="margin:0">Early Ph.D. work on parallel systems.</p>
+      <ul>
+        <li>Built a GPU-accelerated B+ tree in CUDA for parallel index search, with a custom GPU memory allocator for dynamic index structures.</li>
+        <li>Developed a clustering approach for more efficient equality and range queries.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="pub">
+    <div class="venue">TAFFC</div>
+    <div>
+      <div class="title">A Multimodal Dataset for Music-Induced Emotion and Micro-Behavior Analysis in Older Adults</div>
+      <div class="authors"><b>Jiayi Wang</b>, Guanqing Guo, Ashley Tabachnick, Jianing Su, Hongdao Meng, Shaun Canavan, John Michael Templeton, Dmitry Goldgof, Yu Sun</div>
+      <div class="where">IEEE Transactions on Affective Computing, accepted, 2026</div>
+      <div class="acts"><a href="mailto:jiayi.oliviawang@gmail.com?subject=Dataset%20access%20request">Dataset (on request)</a><a href="assets/pdf/poster_CITA_2026.pdf" target="_blank" rel="noopener">Poster</a><span>PDF: coming soon</span></div>
+    </div>
+  </div>
+  <div class="pub">
+    <div class="venue">CBMS</div>
+    <div>
+      <div class="title">Automated Deep Learning Approach for Post-Operative Neonatal Pain Detection and Prediction Through Physiological Signals</div>
+      <div class="authors">J. Hausmann, <b>J. Wang</b>, M. Kneusel, S. Prescott, P. R. Mouton, Y. Sun, D. Goldgof</div>
+      <div class="where">2025 IEEE 38th International Symposium on Computer-Based Medical Systems (CBMS), pp. 801–806</div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTERS & TALKS -->
+<section id="talks">
+  <h2>Posters &amp; Talks</h2>
+  <ul class="list">
+    <li><span><b>AI-Assisted Music Intervention for Older Adults via Multimodal Behavior Analysis</b>: poster, USF CITA Open House · <a href="assets/pdf/poster_CITA_2026.pdf" target="_blank" rel="noopener">PDF</a></span><span class="when">Apr 2026</span></li>
+    <li><span><b>“AI-Based Precision Music Intervention for Alzheimer’s Disease and Related Dementias (AD/ADRD)”</b>: research presentation, USF Center for Innovation, Technology &amp; Aging (CITA)</span><span class="when">Feb 2025</span></li>
+    <li><span><b>“AI-Based Precision Music Intervention for Alzheimer’s Disease and Related Dementias (AD/ADRD)”</b>: poster, USF AI+X Symposium</span><span class="when">Oct 2024</span></li>
+    <li><span><b>Precision Music Intervention through Computer Vision-Based Human Affect Assessment</b>: poster, USF AI+X Symposium · <a href="assets/pdf/poster_AIX_2023.pdf" target="_blank" rel="noopener">PDF</a></span><span class="when">2023</span></li>
+  </ul>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <h2>News</h2>
+  <ul class="news">
+    <li><time>2026</time><span>Our older-adult music-emotion dataset paper was <b>accepted to IEEE Transactions on Affective Computing</b>.</span></li>
+    <li><time>Apr 2026</time><span>Presented a poster on AI-assisted music intervention at the USF CITA Open House.</span></li>
+    <li><time>2025</time><span>Neonatal pain detection paper published at <b>IEEE CBMS 2025</b>.</span></li>
+    <li><time>2025</time><span>Student volunteer at <b>IEEE ICRA 2025</b>.</span></li>
+    <li><time>May 2025</time><span>Our team manuscript <i>“Advancing Stridor Detection with Artificial Intelligence and Bridge2AI Voice Data”</i> won the <b>2nd Place Steven Dean Gray Award</b> from the ABEA, presented at COSM 2025 in New Orleans.</span></li>
+    <li><time>Feb 2025</time><span>Presented our AI-based precision music intervention work for AD/ADRD at the USF Center for Innovation, Technology &amp; Aging.</span></li>
+    <li><time>Oct 2024</time><span>Presented a poster on AI-based precision music intervention for AD/ADRD at the USF AI+X Symposium.</span></li>
+    <li><time>Aug 2024</time><span>Completed the NIH-funded Bridge2AI-Voice training program and was named a <a href="https://www.b2aivoicescholars.org/our-scholars#!biz/id/66ce20bb5325c8d871041ce2" target="_blank" rel="noopener">Bridge2AI-Voice Scholar</a>.</span></li>
+    <li><time>Aug 2024</time><span>Our team received an <b>Honorable Mention</b> at the Bridge2AI-Voice Hackathon (9 teams, 4 universities).</span></li>
+    <li><time>2024</time><span>The USF Voice AI program I took part in was <a href="https://www.fox13news.com/video/1488225" target="_blank" rel="noopener">featured on FOX 13 News</a>.</span></li>
+    <li><time>2023</time><span>Presented a poster at the USF AI+X Symposium.</span></li>
+    <li><time>2022</time><span>Attended the <b>Grace Hopper Celebration (GHC)</b> with a USF-funded scholarship.</span></li>
+    <li><time>2021</time><span>Received the <b>USF University Graduate Fellowship</b>.</span></li>
+  </ul>
+</section>
+
+<!-- TEACHING & MENTORING -->
+<section id="teaching">
+  <h2>Teaching &amp; Mentoring</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Teaching Assistant, USF</h3>
+      <ul class="list">
+        <li><span>CAI 5005 Introduction to AI</span><span class="when">Fall 2024</span></li>
+        <li><span>CIS 3213 Foundations of Cybersecurity</span><span class="when">Fall 2023</span></li>
+        <li><span>COP 4703 Advanced Database for IT</span><span class="when">Fall 2022, Spring 2023</span></li>
+        <li><span>COP 4538 Data Structures</span><span class="when">Fall 2022</span></li>
+        <li><span>COP 4520 / 6527 Computing Massive Parallel Systems</span><span class="when">Fall 2021</span></li>
+        <li><span>COP 6712 Database Management Systems</span><span class="when">Fall 2021</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Mentoring</h3>
+      <ul>
+        <li>Mentored an undergraduate research volunteer from the University of Washington on the older-adult dataset project.</li>
+        <li>Mentored USF computer science students on wearable physiological sensing: time-synchronized collection and demos of EDA, heart-rate/HRV and other signals with Polar H10, Google Fitbit and Empatica EmbracePlus, including a device comparison table.</li>
+        <li>Coordinate with behavioral-science students who run participant data collection, and lead the data analysis and modeling.</li>
+      </ul>
+      <h3 style="margin-top:18px">Service</h3>
+      <ul>
+        <li>Student Volunteer, IEEE International Conference on Robotics and Automation (ICRA) 2025</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE / EDUCATION / AWARDS -->
+<section id="experience">
+  <h2>Education, Experience &amp; Awards</h2>
+  <div class="two">
+    <div class="card">
+      <h3>Education</h3>
+      <ul class="list">
+        <li><span><b>Ph.D., Computer Science &amp; Engineering</b> · GPA 3.97/4.0<br><span class="muted">University of South Florida · Advisor: Prof. Yu Sun</span></span><span class="when">2021 – 2027 (exp.)</span></li>
+        <li><span><b>M.S., Computer Science</b> · GPA 3.96/4.0<br><span class="muted">University of South Florida</span></span><span class="when">2019</span></li>
+        <li><span><b>B.E., Software Engineering</b><br><span class="muted">Inner Mongolia University</span></span><span class="when">2016</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Industry Experience</h3>
+      <ul class="list">
+        <li><span><b>Quality Assurance</b> · WebstaurantStore, Tampa<br><span class="muted">Web testing in Agile teams, SQL database testing, cross-team root-cause triage</span></span><span class="when">2020 – 2021</span></li>
+        <li><span><b>Software Engineer</b> · Greedy Cat, Tampa<br><span class="muted">iOS/Android app testing, debugging and user-feedback analysis</span></span><span class="when">2019 – 2020</span></li>
+      </ul>
+      <h3 style="margin-top:18px">Awards &amp; Certifications</h3>
+      <ul>
+        <li>2nd Place, Steven Dean Gray Award, American Broncho-Esophagological Association (2025)</li>
+        <li>Honorable Mention, Bridge2AI-Voice Hackathon (2024)</li>
+        <li><a href="https://www.b2aivoicescholars.org/our-scholars#!biz/id/66ce20bb5325c8d871041ce2" target="_blank" rel="noopener">Bridge2AI-Voice Scholar</a>, NIH Common Fund Bridge2AI-Voice training program (2024)</li>
+        <li>USF University Graduate Fellowship (2021)</li>
+        <li>Grace Hopper Celebration Scholarship, USF (2022)</li>
+        <li>Oracle Database SQL Certified Expert; Oracle Database 11g Administrator Certified Associate</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Jiayi (Olivia) Wang · Last updated September 2026</div>
+</footer>
+
+</body>
+</html>
